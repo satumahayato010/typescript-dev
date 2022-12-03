@@ -1,0 +1,23 @@
+{
+  "name": "typescript-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://satumahayato010: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@github.com/satumahayato010/typescript-dev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satumahayato010/typescript-dev/issues"
+  },
+  "homepage": "https://github.com/satumahayato010/typescript-dev#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
