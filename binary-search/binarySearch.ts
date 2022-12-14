@@ -11,44 +11,44 @@ Explanation: 9 exists in nums and its index is 4
 */
 
 function binarySearch(nums: number[], target: number): number {
-    let low = 0
-    let high = nums.length - 1
+    let left = 0
+    let right = nums.length - 1
 
-    while (low <= high) {
-        let mid = Math.floor((low + high) / 2)
+    while (left <= right) {
+        let mid = Math.floor((left + right) / 2)
         if (nums[mid] === target) {
             return mid
         } else if (nums[mid] < target) {
-            low = mid + 1
+            left = mid + 1
         } else {
-            high = mid - 1
+            right = mid - 1
         }
     }
     return -1
 }
 
 function binarySearchRecursive(
-    nums: number[], target: number, low: number, high: number): number {
-    if (low > high) {
+    nums: number[], target: number, left: number, right: number): number {
+    if (left > right) {
         return -1
     }
 
-    let mid = Math.floor((low + high) / 2)
+    let mid = Math.floor((left + right) / 2)
     if (nums[mid] === target) {
         return mid
     } else if (nums[mid] < target) {
-        return binarySearchRecursive(nums, target, mid + 1, high)
+        return binarySearchRecursive(nums, target, mid + 1, right)
     } else {
-        return binarySearchRecursive(nums, target, low, mid - 1)
+        return binarySearchRecursive(nums, target, left, mid - 1)
     }
 
 }
 
 const nums: number[] = [-1, 0, 3, 5, 9, 12]
 const target = 9
-const low = 0
-const high = nums.length - 1
-const output = binarySearchRecursive(nums, target, low, high)
+const left = 0
+const right = nums.length - 1
+const output = binarySearchRecursive(nums, target, left, right)
 console.log(output)
 
 export {}
