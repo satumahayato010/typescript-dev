@@ -7,7 +7,6 @@ Input: salary = [4000,3000,1000,2000]
 Output: 2500.00000
 */
 
-
 function averageSalary(salary: number[]): number {
     let minNum = salary[0]
     let maxNum = salary[0]
